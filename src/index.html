@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Jess Brown</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/Favicon.png" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="coming-soon">
+      <div class="coming-soon-logo">
+        <img src="/images/logo.svg" />
+      </div>
+      <div class="coming-soon-text">
+        <h1 class="coming-soon-title">Coming soon to mobile</h1>
+        <div class = "coming-soon-body-div">
+        <h4 class="coming-soon-body">
+          To experience the full portfolio, please view on desktop &#128522 Check back soon!
+        </h4>
+      </div>
+      </div>
+      <div class="ledge"></div>
+      <div class="avatar avatar-coming-soon">
+        <img src="/images/avatar-3.svg" />
+      </div>
+      
+    </div>
+    <script src="https://unpkg.com/mustache@latest"></script>
+    <!-- <script src="node_modules/mustache/mustache.min.js"></script> -->
+
+    <script src="index.js" type="module"></script>
+
+    <!-- Homepage Template-->
+    <script type="text/template" id="template-page-home">
+      <div class = "hero">
+        <div id = "scene" data-relative-input="true">
+        <img class ="hero-img-bg" src = "images/WebsiteLandingBG.png"  data-depth="0.1">
+        <img class ="hero-img" src = "images/WebsiteLanding.png">
+        <img class ="code-img" src = "images/WebsiteLandingCode.png" data-depth="0.1">
+        <img class ="design-img" src = "images/WebsiteLandingDesign.png" data-depth="0.1">
+        <img class = " hero-img-bits green" src = "images/green.png" data-depth="0.4">
+        <img class = " hero-img-bits blue" src = "images/blue.png" data-depth="0.3">
+        <img class = " hero-img-bits orange" src = "images/orange.png" data-depth="0.4">
+        <img class = " hero-img-bits pink" src = "images/pink.png" data-depth="0.3">
+        </div>
+        <div class = "landing-grid">
+          <div class ="white-bg-1"> </div>
+          <div class ="white-bg-2"> </div>
+          <div class ="landing-heading">
+            <h1> Life's too short for </h1>
+          </div>
+          <div class ="landing-heading-2">
+            <h1 class = "caps-title">INSTRUCTIONS </h1>
+          </div>
+          <div class ="landing-body">
+            <h4> That's where I come in.
+           Bold UI, natural UX and a little bit of magic. </h4>
+          </div>
+
+          <a class="action-button-home" href="#work"> explore <i class="fas fa-arrow-down icon"></i> </a>
+
+        </div>
+      </div>
+
+      <div class="page-home">
+                <header class="page-header">
+                    <nav id="main-nav">
+                      <div id="logo"></div>
+                    </nav>
+                </header>
+                <main class="page-content-home">
+
+                    <section class= "work-section" id="work">
+                      <div class= "work-section-grid">
+                        <div class = "grey-div-my-work" data-aos = "fade-down">
+                        </div>
+                        <div class= "my-work-title-div" data-aos = "fade-down" data-aos-offset= "-100">
+                          <h1 class = "my-work-title-div-name"> PROJECTS </h1>
+                        </div>
+
+                          <a href = "#catch" id= "catch-project-btn" class = "project-btns">
+                            <img src = "images/catch-project-btn.png" data-aos = "fade-right" data-aos-offset= "200">
+                          </a>
+                          <a href = "#clink" id= "clink-project-btn" class = "project-btns">
+                            <img src = "/images/clink-project-btn.png" data-aos = "fade-left" data-aos-offset= "250">
+                          </a>
+                          <a href = "#adobe" id= "adobe-project-btn" class = "project-btns">
+                            <img src = "/images/adobe-project-btn.png" data-aos = "fade-left" data-aos-offset= "100">
+                          </a>
+
+                      </div>
+                    </section>
+                    <section class="about-section" id= "about">
+                      <div class = "about-grid">
+                        <div class ="avatar-div" data-aos = "fade-up">
+                          <img class = "avatar" src = "/images/avatar-2.svg">
+                        </div>
+                        <div class ="title-div-name" >
+                          <h1 class = "my-work-title-div-name"> ABOUT ME </h1>
+                        </div>
+                        <div class = "text-div-grid">
+                          <div class = "text-div-title" data-aos = "fade-left">
+                          <h2 class = "text-title"> {{text_title}} </h2>
+                          </div>
+                          <div class = "text-div-body-1" data-aos = "fade-left">
+                            <p class = "text-body-1"> {{body_1}}</p>
+                            </div>
+                            <div class = "text-div-body-2" data-aos = "fade-left">
+                              <p class = "text-body-2"> {{body_2}}</p>
+                              </div>
+                        </div>
+                        <div class = "current-ob-div-grid">
+                          <div class = "current-ob-title-div" data-aos = "fade-left">
+                            <h3 class = "current-ob-title"> CURRENT OBSESSIONS </h3>
+                          </div>
+                          <div class = "following-img-div" data-aos = "fade-left">
+                            <a href="https://www.instagram.com/stefankunz/" target="_blank"><img class = "following-img img-shadow" src = "{{following_img}}"></a>
+                          </div>
+                          <div class = "following-text-div" data-aos = "fade-left" >
+                            <h4 class ="current-ob-tag"> FOLLOWING </h4>
+                            <a class ="current-ob-link" target="_blank" href = "https://www.instagram.com/stefankunz/"> @stefankunz</a>
+                          </div>
+                          <div class = "reading-img-div" data-aos = "fade-left" data-aos-offset="200">
+                            <a target="_blank" href = "https://www.goodreads.com/book/show/1215032.The_Wise_Man_s_Fear"><img class = "reading-img img-shadow" src = "{{reading_img}}"></a>
+                          </div>
+                          <div class = "reading-text-div" data-aos = "fade-left" data-aos-offset="200">
+                            <h4 class ="current-ob-tag"> READING </h4>
+                            <a  class ="current-ob-link"  target="_blank" href = "https://www.goodreads.com/book/show/1215032.The_Wise_Man_s_Fear"> The Wise Man's Fear by Patrick Rothfuss</a>
+                          </div>
+                          <div class = "listening-img-div" data-aos = "fade-left" data-aos-offset="300">
+                            <a target="_blank" href = "https://poolside.fm"> <img class = "listening-img img-shadow" src = "{{listening_img}}"></a>
+                          </div>
+                          <div class = "listening-text-div" data-aos = "fade-left" data-aos-offset="300">
+                            <h4 class ="current-ob-tag"> LISTENING </h4>
+                            <a  class ="current-ob-link"  target="_blank" href = "https://poolside.fm"> Poolside FM</a>
+                          </div>
+
+                        </div>
+                      </div>
+                    </section>
+                    <section class="showreel-section">
+
+
+                    </section>
+                    <section class="contact-section " id="contact">
+                      <div class = "contact-form" data-aos = "fade-up"  data-aos-offset="250">
+                      </div>
+                    </section>
+                </main>
+                <div id="footer-div"></div>
+              </div>
+    </script>
+
+    <!-- Project page Template Catch-->
+    <script type="text/template" id="template-page-work-catch">
+      <div class="page" >
+        <header class="page-header">
+          <nav id="main-nav">
+            <div id="logo"></div>
+          </nav>
+      </header>
+          <main class="page-content">
+            <div class="project-visual">
+              <img src ="{{project_visual}}">
+            </div>
+            <div class= "project-page-grid">
+              <div class="intro-grid" data-aos="fade-right">
+                <div class ="intro-grid-left">
+                <div class="title">
+                  <h1>{{title}}</h1>
+                </div>
+
+                <div class="subtitle" >
+                  <h4>{{subtitle}}</h4>
+                </div>
+
+                <div class="palette">
+
+                </div>
+
+                <div class="descriptors">
+
+                </div>
+
+                <div class="icons">
+
+                </div>
+              </div>
+
+
+              </div>
+
+               <!-- <div class= "banner-1">
+                <img src = "{{banner_img_1}}">
+              </div> -->
+
+              <div class="page-content-grid">
+                <div class ="project-brief-heading" >
+                  <h2> Catching the Bus is Boring<h2>
+                  </div>
+                  <div class ="project-brief-body">
+                  <p> {{project_brief}}</p>
+                  </div>
+
+                <div class = "rationale-div" data-aos="fade-down">
+                  <h2 class = "rationale"> Why Catch? </h2>
+                  <p class = "rionatle-body"> {{rationale_body}}</p>
+                </div>
+                <div class = "project-goals-grid" data-aos="fade-down">
+                  <div class = "project-goals-heading">
+                    <h3> Project Goals </h3>
+                  </div>
+                  <div id = "project-goals">
+
+                  </div>
+                </div>
+
+                <div class = "core-findings-grid" data-aos="fade-down">
+                  <div class = "core-findings-heading">
+                    <h3> What a User Wants </h3>
+                  </div>
+                  <div class ="core-findings-body">
+                    <p> {{core_findings}}</p>
+                    </div>
+                    <div class ="core-findings-img-div">
+                      <img src = "{{core_findings_img}}">
+                    </div>
+                    <div class ="core-findings-body-2">
+                      <p> {{core_findings_2}}</p>
+                      </div>
+
+                  </div>
+
+
+
+                <div class = "design-solution-grid" data-aos="fade-down" >
+                  <div class = "design-solution-heading">
+                    <h2> Let's fix that... </h2>
+                  </div>
+                  <div class ="design-solution-body">
+                    <p> {{design_solution}}</p>
+                    </div>
+                    <div class ="design-solution-img-div" >
+                      <img src = "{{design_solution_img}}">
+                    </div>
+                </div>
+
+
+                <div class="interactions-grid ">
+                  <div class = "interaction-text-div">
+                    <h3> {{interaction_1_heading}} </h3>
+                    <p> {{interaction_1_body}} </p>
+                  </div>
+                  <div class="interaction-vid-div interaction-vid-div-1" data-aos="fade-left">
+                    <video muted autoplay loop src = "{{interaction_1_video}}" type="video/mp4" >
+                  </div>
+                  <div class="interaction-vid-div interaction-vid-div-2" data-aos="fade-right">
+                    <video muted autoplay loop src = "{{interaction_2_video}}" type="video/mp4">
+                  </div>
+                  <div class = "interaction-text-div interaction-text-div-2">
+                    <h3> {{interaction_2_heading}} </h3>
+                    <p> {{interaction_2_body}} </p>
+                  </div>
+                </div>
+
+                  <div class="interaction-garden-grid" data-aos="fade-down" >
+                    <div class = "interaction-garden-heading-div">
+                      <h3> {{interaction_3_heading}} </h3>
+                    </div>
+                    <div class="interaction-garden-body-div">
+                    <p> {{interaction_3_body}} </p>
+                    </div>
+                    <div class ="interaction-garden-img-1-div">
+                      <img src = "{{interaction_3_img_1}}">
+                    </div>
+                    <div class ="interaction-garden-img-2-div">
+                      <img src = "{{interaction_3_img_2}}">
+                    </div>
+                  </div>
+
+                  <div class="conclusion-grid" data-aos="fade-down">
+                    <div class="conclusion-heading-div">
+                      <h2> Listening to the User </h2>
+                    </div>
+                    <div class="conclusion-body-div">
+                      <p> {{concluding_comments}} </p>
+                    </div>
+                  </div>
+
+                  <div class ="project-brief-link action-button-catch">
+                    <a class="pdf-link"> View Full Case Study here<i class="fas fa-external-link-alt icon"></i> </a>
+                  </div>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+                  </div>
+
+
+                  <div class="next-project-grid">
+                    <div class= "back-to-work-div" data-aos="fade-left">
+                      <div class ="back-to-work-hover">
+                      <i class="fas fa-arrow-left"></i>
+                      <h3> Back to Work </h3>
+                      </div>
+                    </div>
+                    <div class= "next-project-grey-div"></div>
+                    <div class= "next-project-heading-div">
+                      <h1> Want to see more? </h1>
+                    </div>
+                    <div class= "next-project-div" data-aos="fade-right">
+                      <div class = "next-project-hover">
+                      <h3> Next Project </h3>
+                      <i class="fas fa-arrow-right"></i>
+                      </div>
+                    </div>
+                    <div class= "next-project-img-div" data-aos="fade-left" data-aos-duration = "2000">
+                      <img src = "{{next_project_img}}">
+                    </div>
+                    <div class = "contact-btn-div" data-aos="fade-down">
+                      <button class = "contact-btn contact-btn-{{project_name}}"> GET IN TOUCH</button>
+                    </div>
+                  </div>
+
+
+
+
+
+
+          </main>
+          <div id="footer-div"></div>
+
+      </div>
+      </div>
+    </script>
+
+    <!-- Project page Template Aodbe-->
+    <script type="text/template" id="template-page-work-adobe">
+
+      <div class="page">
+        <header class="page-header">
+          <nav id="main-nav">
+            <div id="logo"></div>
+          </nav>
+      </header>
+          <main class="page-content">
+            <div class="project-visual">
+              <img src ="{{project_visual}}">
+            </div>
+            <div class= "AD-project-page-grid">
+              <div class="AD-intro-grid" data-aos="fade-right">
+                <div class ="AD-intro-grid-left">
+                <div class="title">
+                  <h1>{{title}}</h1>
+                </div>
+
+                <div class="subtitle">
+                  <h4>{{subtitle}}</h4>
+                </div>
+
+                <div class ="AD-project-link">
+                  <a class="action-button-adobe" href="{{adobe_link}}" target= "_blank"> Watch it here <i class="fas fa-external-link-alt icon"></i> </a>
+                </div>
+
+                <div class = "palette" id="AD-palette">
+
+                </div>
+
+                <div class= "descriptors" id="AD-descriptors">
+
+                </div>
+
+                <div class= "icons"  id="AD-icons">
+
+                </div>
+              </div>
+
+
+              </div>
+
+              <!-- <div class= "banner-1">
+                <img src = "{{banner_img_1}}">
+              </div> -->
+
+              <div class="AD-page-content-grid">
+                <div class ="project-brief-heading">
+                  <h2> Remember Me? <h2>
+                  </div>
+                  <div class ="project-brief-body">
+                  <p> {{project_brief}}</p>
+                  </div>
+
+
+
+                <div class = "the-assets-grid" data-aos="fade-down">
+                  <div class = "the-assets-heading">
+                    <h3> Adobe-ception</h3>
+                  </div>
+                  <div class ="the-assets-body">
+                    <p> {{assets_body}}</p>
+                    </div>
+                    <div class ="assets-imgs-div" >
+                      <div class ="assets-img assets-img-1" data-aos="fade-right" data-aos-offset="-100"><img src = "{{assets_img_1}}"></div>
+                      <div class ="assets-img assets-img-2" data-aos="fade-left" data-aos-offset="200"><img src = "{{assets_img_2}}"></div>
+                      <div class ="assets-img assets-img-3" data-aos="fade-right" data-aos-offset="400"><img src = "{{assets_img_3}}"></div>
+                    </div>
+                  </div>
+
+
+
+                <div class = "dream-bigger-grid" data-aos="fade-down">
+                  <div class = "dream-bigger-heading">
+                    <h2> Dream Bigger </h2>
+                  </div>
+                  <div class ="dream-bigger-body">
+                    <p> {{dream_bigger_body}}</p>
+                    </div>
+                    <div class ="dream-bigger-video-div">
+                      <iframe class ="dream-bigger-video"src="{{dream_bigger_video}}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen"></iframe>
+                    </div>
+                </div>
+
+
+                  <div class="AD-conclusion-grid" data-aos="fade-down">
+                    <div class="conclusion-heading-div">
+                      <h2> Skills in Motion </h2>
+                    </div>
+                    <div class="conclusion-body-div">
+                      <p> {{concluding_comments}} </p>
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+                  </div>
+
+
+                  <div class="next-project-grid">
+                    <div class= "back-to-work-div" data-aos="fade-left">
+                      <div class ="back-to-work-hover">
+                      <i class="fas fa-arrow-left"></i>
+                      <h3> Back to Work </h3>
+                      </div>
+                    </div>
+                    <div class= "next-project-grey-div"></div>
+                    <div class= "next-project-heading-div">
+                      <h1> Want to see more? </h1>
+                    </div>
+                    <div class= "next-project-div" data-aos="fade-right">
+                      <div class = "next-project-hover">
+                      <h3> Next Project </h3>
+                      <i class="fas fa-arrow-right"></i>
+                      </div>
+                    </div>
+                    <div class= "next-project-img-div" data-aos="fade-left" data-aos-duration = "2000">
+                      <img src = "{{next_project_img}}">
+                    </div>
+                    <div class = "contact-btn-div" data-aos="fade-down">
+                      <button class = "contact-btn contact-btn-{{project_name}}"> GET IN TOUCH</button>
+                    </div>
+                  </div>
+
+
+
+
+
+
+          </main>
+          <div id="footer-div"></div>
+
+      </div>
+      </div>
+    </script>
+
+    <!-- Project page Template Clink-->
+    <script type="text/template" id="template-page-work-clink">
+
+      <div class="page">
+        <header class="page-header">
+          <nav id="main-nav">
+            <div id="logo"></div>
+          </nav>
+      </header>
+          <main class="page-content">
+            <div class="project-visual">
+              <img src ="{{project_visual}}">
+            </div>
+            <div class= "clink-project-page-grid">
+              <div class="clink-intro-grid" data-aos="fade-right">
+                <div class ="clink-intro-grid-left">
+                <div class="title">
+                  <h1>{{title}}</h1>
+                </div>
+
+                <div class="subtitle">
+                  <h4>{{subtitle}}</h4>
+                </div>
+
+                <div class ="clink-project-link">
+                  <a class="action-button-clink" href="{{clink_link}}" target= "_blank"> VISIT SITE <i class="fas fa-external-link-alt icon"></i> </a>
+                </div>
+
+                <div class = "palette" id="clink-palette">
+
+                </div>
+
+                <div class= "descriptors" id="clink-descriptors">
+
+                </div>
+
+                <div class= "icons"  id="clink-icons">
+
+                </div>
+              </div>
+
+
+              </div>
+
+               <!-- <div class= "banner-1">
+                <img src = "{{banner_img_1}}">
+              </div> -->
+
+              <div class="clink-page-content-grid">
+                <div class ="clink-project-brief-heading">
+                  <h2> Picking your Poison <h2>
+                  </div>
+                  <div class ="clink-project-brief-body" >
+                  <p> {{project_brief}}</p>
+                  </div>
+
+
+
+                <div class = "clink-assets-grid" data-aos="fade-down">
+                  <div class = "the-assets-heading">
+                    <h3> Homebrewed</h3>
+                  </div>
+                  <div class ="the-assets-body">
+                    <p> {{assets_body}}</p>
+                    </div>
+
+                  </div>
+                  <div class ="drinks-imgs-div" >
+                    <div class = "drinks-row-1"  data-aos = "fade-right" data-aos-duration= "2000"></div>
+                    <div class = "drinks-row-2"  data-aos = "fade-left" data-aos-duration= "2000"></div>
+                    <div class = "drinks-row-3"  data-aos = "fade-right" data-aos-duration= "2000"></div>
+                    <div class = "drinks-overlay" ></div>
+                  </div>
+
+
+
+                <div class = "clink-solution-grid" >
+                  <div class = "dream-bigger-heading" data-aos="fade-down">
+                    <h2> Distilling the Choices </h2>
+                  </div>
+                  <div class ="dream-bigger-body" data-aos="fade-down">
+                    <p> {{solution_body}}</p>
+                    <br>
+                    <a class="action-button-clink" href="{{clink_link}}" target= "_blank"> VISIT SITE <i class="fas fa-external-link-alt icon"></i> </a>
+                    </div>
+
+                </div>
+                <div class ="clink-solution-div">
+                  <div class = "clink-solution-2" data-aos = "zoom-in-down" >
+                  <img src = {{clink_solution_img_2}}>
+                  </div>
+                  <div  class = "clink-solution-1" data-aos = "zoom-in-down" data-aos-offset = "-10" >
+                  <img src = {{clink_solution_img_1}}>
+                  </div>
+                </div>
+
+
+
+                <div class = "clink-visual-grid" data-aos="fade-down">
+                  <div class = "clink-visual-heading">
+                    <h3> A Visual Experience </h3>
+                  </div>
+                  <div class ="clink-visual-body">
+                    <p> {{visual_body}}</p>
+                    <br>
+                    </div>
+                    <div class ="clink-visual-vid-div"  data-aos = "fade-down">
+                      <video muted autoplay loop src = "{{clink_visual_vid}}" type="video/mp4">
+                    </div>
+                </div>
+
+                <div class = "clink-responsive-grid" data-aos="fade-down">
+                  <div class = "clink-responsive-heading">
+                    <h3> Accessible Anywhere </h3>
+                  </div>
+                  <div class ="clink-responsive-body">
+                    <p> {{res_body}}</p>
+                  </div>
+
+                </div>
+                <div class ="clink-responsive-img">
+                  <div class = "res-1" data-aos = "fade-right" data-aos-offset = "300">
+                  <img src = "{{res_1}}">
+                  </div>
+                  <div class = "res-2" data-aos = "fade-left" data-aos-offset = "400">
+                  <img class = "res-2-img" src = "{{res_2}}">
+                  </div>
+                  <div class = "res-3" data-aos = "fade-left" data-aos-offset = "400">
+                  <img src = "{{res_3}}">
+                  </div>
+                  <div class = "res-4" data-aos = "fade-right" data-aos-offset = "300">
+                  <img  src = "{{res_4}}">
+                  </div>
+                  <div class = "res-5" data-aos = "fade-left" data-aos-offset = "300">
+                  <img  class = "res-5-img" src = "{{res_5}}">
+                  </div>
+                  <div class = "res-6" data-aos = "fade-right"  data-aos-offset = "200">
+                  <img  src = "{{res_6}}">
+                  </div>
+                  <div class = "res-7" data-aos = "fade-right"  data-aos-offset = "100">
+                  <img src = "{{res_7}}">
+                  </div>
+
+
+
+                </div>
+
+
+
+
+                  <div class="clink-conclusion-grid" data-aos="fade-down">
+                    <div class="conclusion-heading-div">
+                      <h2> Creative Coding </h2>
+                    </div>
+                    <div class="conclusion-body-div">
+                      <p> {{concluding_comments}} </p>
+                    </div>
+                    <div class="clink-footer-div"  data-aos = "flip-up" >
+                      <img class = "clink-footer" src = "{{clink_footer}}">
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+                  </div>
+
+
+                  <div class="next-project-grid">
+                    <div class= "back-to-work-div" data-aos="fade-left">
+                      <div class ="back-to-work-hover">
+                      <i class="fas fa-arrow-left"></i>
+                      <h3> Back to Work </h3>
+                      </div>
+                    </div>
+                    <div class= "next-project-grey-div"></div>
+                    <div class= "next-project-heading-div">
+                      <h1> Want to see more? </h1>
+                    </div>
+                    <div class= "next-project-div" data-aos="fade-right">
+                      <div class = "next-project-hover">
+                      <h3> Next Project </h3>
+                      <i class="fas fa-arrow-right"></i>
+                      </div>
+                    </div>
+                    <div class= "next-project-img-div" data-aos="fade-left" data-aos-duration = "2000">
+                      <img src = "{{next_project_img}}">
+                    </div>
+                    <div class = "contact-btn-div" data-aos="fade-down">
+                      <button class = "contact-btn contact-btn-{{project_name}}"> GET IN TOUCH</button>
+                    </div>
+                  </div>
+
+
+
+
+
+
+          </main>
+          <div id="footer-div"></div>
+
+      </div>
+      </div>
+    </script>
+
+    <!-- 404 Page Template-->
+    <script type="text/template" id="template-page-404">
+      <div class="page">
+          <header class="page-header">
+              <div id="logo"></div>
+              <nav id="main-nav"></nav>
+          </header>
+          <main class="page-content">
+              <h1>404 page/file not found</h1>
+              <p>Oopsy</p>
+          </main>
+      </div>
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js    "></script>
+    <script src="https://embed.typeform.com/embed.js"></script>
+  </body>
+</html>
