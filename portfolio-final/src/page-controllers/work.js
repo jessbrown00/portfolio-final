@@ -31,7 +31,6 @@ function workPageController() {
 
       if (currentProject.descriptors) {
         currentProject.descriptors.forEach((descriptor) => {
-          console.log(descriptor);
           const descriptorText = document.createElement("h4");
           descriptorText.innerHTML = `${descriptor.title}`;
 

@@ -26,10 +26,6 @@ const App = {
     }, 800);
     // listen for hash change and run App.router
     window.addEventListener("hashchange", App.router);
-    /*Auth.check(() => {
-      
-
-    });*/
   },
 
   addRoute: (path, pageController) => {
@@ -211,7 +207,11 @@ const App = {
     instaBtn.append(instaIcon);
     socialsDiv.append(instaBtn);
     instaIcon.setAttribute("data-aos", "flip-left");
-    instaIcon.setAttribute("data-aos-offset", "80");
+    if (window.matchMedia("(min-width: 1440px)").matches) {
+      instaIcon.setAttribute("data-aos-offset", "80");
+    } else {
+      instaIcon.setAttribute("data-aos-offset", "-100");
+    }
 
     //LinkedIn
     const linkedInBtn = document.createElement("a");
@@ -223,8 +223,12 @@ const App = {
     linkedInBtn.append(linkedInIcon);
     socialsDiv.append(linkedInBtn);
     linkedInIcon.setAttribute("data-aos", "flip-left");
-    linkedInIcon.setAttribute("data-aos-offset", "80");
     linkedInIcon.setAttribute("data-aos-delay", 200);
+    if (window.matchMedia("(min-width: 1440px)").matches) {
+      linkedInIcon.setAttribute("data-aos-offset", "80");
+    } else {
+      linkedInIcon.setAttribute("data-aos-offset", "-100");
+    }
 
     //Behance
     const behanceBtn = document.createElement("a");
@@ -236,8 +240,13 @@ const App = {
     behanceBtn.append(behanceIcon);
     socialsDiv.append(behanceBtn);
     behanceIcon.setAttribute("data-aos", "flip-left");
-    behanceIcon.setAttribute("data-aos-offset", "80");
+
     behanceIcon.setAttribute("data-aos-delay", 300);
+    if (window.matchMedia("(min-width: 1440px)").matches) {
+      behanceIcon.setAttribute("data-aos-offset", "80");
+    } else {
+      behanceIcon.setAttribute("data-aos-offset", "-100");
+    }
 
     //Dribbble
     const dribbbleBtn = document.createElement("a");
@@ -249,8 +258,13 @@ const App = {
     dribbbleBtn.append(dribbleIcon);
     socialsDiv.append(dribbbleBtn);
     dribbleIcon.setAttribute("data-aos", "flip-left");
-    dribbleIcon.setAttribute("data-aos-offset", "80");
+
     dribbleIcon.setAttribute("data-aos-delay", 400);
+    if (window.matchMedia("(min-width: 1440px)").matches) {
+      dribbleIcon.setAttribute("data-aos-offset", "80");
+    } else {
+      dribbleIcon.setAttribute("data-aos-offset", "-100");
+    }
 
     const footerHolder = document.querySelector("#footer-div");
     const footer = document.createElement("footer");
