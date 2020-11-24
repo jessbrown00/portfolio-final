@@ -185,8 +185,6 @@ const App = {
     logoText1.classList.add("logo-text");
     logoText2.classList.add("logo-text-heart");
     logoText3.classList.add("logo-text");
-    logoText2.setAttribute("data-aos", "zoom-in");
-    logoText2.setAttribute("data-aos-offset", "80");
     const logoLink = document.createElement("a");
     logoLink.href = "#";
     const logoImg = document.createElement("img");
@@ -210,7 +208,7 @@ const App = {
     if (window.matchMedia("(min-width: 1440px)").matches) {
       instaIcon.setAttribute("data-aos-offset", "80");
     } else {
-      instaIcon.setAttribute("data-aos-offset", "-100");
+      instaIcon.removeAttribute("data-aos");
     }
 
     //LinkedIn
@@ -227,7 +225,7 @@ const App = {
     if (window.matchMedia("(min-width: 1440px)").matches) {
       linkedInIcon.setAttribute("data-aos-offset", "80");
     } else {
-      linkedInIcon.setAttribute("data-aos-offset", "-100");
+      linkedInIcon.removeAttribute("data-aos");
     }
 
     //Behance
@@ -245,7 +243,7 @@ const App = {
     if (window.matchMedia("(min-width: 1440px)").matches) {
       behanceIcon.setAttribute("data-aos-offset", "80");
     } else {
-      behanceIcon.setAttribute("data-aos-offset", "-100");
+      behanceIcon.removeAttribute("data-aos");
     }
 
     //Dribbble
@@ -263,7 +261,7 @@ const App = {
     if (window.matchMedia("(min-width: 1440px)").matches) {
       dribbleIcon.setAttribute("data-aos-offset", "80");
     } else {
-      dribbleIcon.setAttribute("data-aos-offset", "-100");
+      dribbleIcon.removeAttribute("data-aos");
     }
 
     const footerHolder = document.querySelector("#footer-div");

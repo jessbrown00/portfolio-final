@@ -87,21 +87,26 @@
 
                     <section class= "work-section" id="work">
                       <div class= "work-section-grid">
+                        <div class = "work-column-1">
                         <div class = "grey-div-my-work" data-aos = "fade-down">
+                          <div class= "my-work-title-div" data-aos = "fade-down" data-aos-offset= "-100">
+                            <h1 class = "my-work-title-div-name"> PROJECTS </h1>
+                          </div>
                         </div>
-                        <div class= "my-work-title-div" data-aos = "fade-down" data-aos-offset= "-100">
-                          <h1 class = "my-work-title-div-name"> PROJECTS </h1>
-                        </div>
-
                           <a href = "#catch" id= "catch-project-btn" class = "project-btns">
                             <img src = "images/catch-project-btn.png" data-aos = "fade-right" data-aos-offset= "200">
                           </a>
+                      </div>
+                       
+<div class = "work-column-2">
+                          
                           <a href = "#clink" id= "clink-project-btn" class = "project-btns">
                             <img src = "/images/clink-project-btn.png" data-aos = "fade-left" data-aos-offset= "250">
                           </a>
                           <a href = "#adobe" id= "adobe-project-btn" class = "project-btns">
                             <img src = "/images/adobe-project-btn.png" data-aos = "fade-left" data-aos-offset= "100">
                           </a>
+                        </div>
 
                       </div>
                     </section>
@@ -175,9 +180,7 @@
           </nav>
       </header>
           <main class="page-content">
-            <div class="project-visual">
-              <img src ="{{project_visual}}">
-            </div>
+           
             <div class= "project-page-grid">
               <div class="intro-grid" data-aos="fade-right">
                 <div class ="intro-grid-left">
@@ -200,6 +203,9 @@
                 <div class="icons">
 
                 </div>
+              </div>
+              <div class="project-visual">
+                <img src ="{{project_visual}}">
               </div>
 
 
@@ -342,7 +348,7 @@
                       <img src = "{{next_project_img}}">
                     </div>
                     <div class = "contact-btn-div" data-aos="fade-down">
-                      <button class = "contact-btn contact-btn-{{project_name}}"> GET IN TOUCH</button>
+                      <button class = "contact-btn"> GET IN TOUCH</button>
                     </div>
                   </div>
 
@@ -368,9 +374,7 @@
           </nav>
       </header>
           <main class="page-content">
-            <div class="project-visual">
-              <img src ="{{project_visual}}">
-            </div>
+            
             <div class= "AD-project-page-grid">
               <div class="AD-intro-grid" data-aos="fade-right">
                 <div class ="AD-intro-grid-left">
@@ -397,6 +401,9 @@
                 <div class= "icons"  id="AD-icons">
 
                 </div>
+              </div>
+              <div class="project-visual">
+                <img src ="{{project_visual}}">
               </div>
 
 
@@ -508,9 +515,7 @@
           </nav>
       </header>
           <main class="page-content">
-            <div class="project-visual">
-              <img src ="{{project_visual}}">
-            </div>
+           
             <div class= "clink-project-page-grid">
               <div class="clink-intro-grid" data-aos="fade-right">
                 <div class ="clink-intro-grid-left">
@@ -537,9 +542,12 @@
                 <div class= "icons"  id="clink-icons">
 
                 </div>
+              
+                
               </div>
-
-
+              <div class="project-visual">
+                <img src ="{{project_visual}}">
+              </div>
               </div>
 
                <!-- <div class= "banner-1">
@@ -557,7 +565,7 @@
 
 
                 <div class = "clink-assets-grid" data-aos="fade-down">
-                  <div class = "the-assets-heading">
+                  <div class = "clink-assets-heading">
                     <h3> Homebrewed</h3>
                   </div>
                   <div class ="the-assets-body">
@@ -575,14 +583,15 @@
 
 
                 <div class = "clink-solution-grid" >
-                  <div class = "dream-bigger-heading" data-aos="fade-down">
-                    <h2> Distilling the Choices </h2>
+                  <div class = "clink-solution-heading" data-aos="fade-down">
+                    <h2 class = "clink-heading"> Distilling the Choices </h2>
                   </div>
-                  <div class ="dream-bigger-body" data-aos="fade-down">
+                  <div class ="clink-solution-body" data-aos="fade-down">
                     <p> {{solution_body}}</p>
                     <br>
-                    <a class="action-button-clink" href="{{clink_link}}" target= "_blank"> VISIT SITE <i class="fas fa-external-link-alt icon"></i> </a>
+                    
                     </div>
+                    <a class="action-button-clink clink-button" href="{{clink_link}}" target= "_blank"> VISIT SITE <i class="fas fa-external-link-alt icon"></i> </a>
 
                 </div>
                 <div class ="clink-solution-div">
@@ -605,7 +614,7 @@
                     <br>
                     </div>
                     <div class ="clink-visual-vid-div"  data-aos = "fade-down">
-                      <video muted autoplay loop src = "{{clink_visual_vid}}" type="video/mp4">
+                      <video class = "clink-vid" muted autoplay loop src = "{{clink_visual_vid}}" type="video/mp4">
                     </div>
                 </div>
 
@@ -619,33 +628,30 @@
 
                 </div>
                 <div class ="clink-responsive-img">
-                  <div class = "res-1" data-aos = "fade-right" data-aos-offset = "300">
-                  <img src = "{{res_1}}">
-                  </div>
-                  <div class = "res-2" data-aos = "fade-left" data-aos-offset = "400">
-                  <img class = "res-2-img" src = "{{res_2}}">
-                  </div>
-                  <div class = "res-3" data-aos = "fade-left" data-aos-offset = "400">
-                  <img src = "{{res_3}}">
-                  </div>
-                  <div class = "res-4" data-aos = "fade-right" data-aos-offset = "300">
-                  <img  src = "{{res_4}}">
-                  </div>
-                  <div class = "res-5" data-aos = "fade-left" data-aos-offset = "300">
-                  <img  class = "res-5-img" src = "{{res_5}}">
-                  </div>
-                  <div class = "res-6" data-aos = "fade-right"  data-aos-offset = "200">
-                  <img  src = "{{res_6}}">
-                  </div>
-                  <div class = "res-7" data-aos = "fade-right"  data-aos-offset = "100">
-                  <img src = "{{res_7}}">
-                  </div>
-
-
-
+                  <div class = "res-column-1">
+                    <div class = "res-1" data-aos="fade-right" data-aos-offset="100">
+                      <img src = "{{res_1}}">
+                    </div>
+                    <div class = "res-4" data-aos="fade-right" data-aos-offset="100">
+                      <img src = "{{res_4}}">
+                    </div>
+                      <div class = "res-6" data-aos="fade-right" data-aos-offset="100">
+                        <img src = "{{res_6}}">
+                      </div>
                 </div>
-
-
+                <div class = "res-column-2 ">
+                  <div class = "res-2" data-aos="fade-left"data-aos-offset="150">
+                    <img src = "{{res_2}}">
+                  </div>
+                  <div class = "res-3" data-aos="fade-left" data-aos-offset="150">
+                    <img src = "{{res_3}}" >
+                  </div>
+                    <div class = "res-5" data-aos="fade-left" data-aos-offset="150">
+                      <img src = "{{res_5}}">
+                    </div>
+                </div>
+              </div>
+            
 
 
                   <div class="clink-conclusion-grid" data-aos="fade-down">
