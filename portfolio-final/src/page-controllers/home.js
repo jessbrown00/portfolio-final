@@ -37,6 +37,38 @@ function homePageController() {
     adobeBtn.addEventListener("click", () => {
       location.hash = "#adobe";
     });
+
+    tippy(".email", {
+      content: "Copy?",
+      arrow: false,
+      placement: "bottom",
+      theme: "custom",
+    });
+
+    tippy(".email", {
+      trigger: "click",
+      content: "Copied",
+      arrow: false,
+      placement: "bottom",
+      theme: "custom",
+    });
+
+    const tickIcon = document.querySelector(".icon-tick-div");
+    tickIcon.classList.add("icon-click");
+
+    const emailBtn = document.querySelector(".email");
+    const copyIcon = document.querySelector(".icon-copy-div");
+    emailBtn.addEventListener("mousedown", () => {
+      emailBtn.classList.add("email-click");
+      copyIcon.classList.add("icon-click");
+    });
+    emailBtn.addEventListener("mouseup", () => {
+      emailBtn.classList.remove("email-click");
+      tickIcon.classList.remove("icon-click");
+    });
+
+    var clipboard = new ClipboardJS(".email");
+    clipboard.on("success", function () {});
   });
 }
 export { homePageController };

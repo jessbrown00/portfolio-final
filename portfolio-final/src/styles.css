@@ -672,7 +672,7 @@ button:focus {
 .page-content-home {
   grid-row: 2;
   display: grid;
-  grid-template-rows: 4vh auto 8vh auto 45vh 70vh 10vh;
+  grid-template-rows: 4vh auto 8vh auto 30vh auto 15vh 70vh 10vh 10vh 5vh;
 }
 
 #landing {
@@ -1241,10 +1241,46 @@ button:focus {
 }
 
 /************ SHOWREEL SECTION ******************/
-
+.showreel-section {
+  grid-row: 6;
+  width: 60%;
+  margin: auto;
+  height: fit-content;
+  min-height: 60vh;
+  display: grid;
+  grid-template-rows: auto 50vw;
+}
+.showreel-vid {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+.showreel-vid iframe {
+  width: 100%;
+}
+.showreel-title-div {
+  width: 100%;
+  height: 15vh;
+  margin: auto;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 214, 112, 1) 0%,
+    rgba(255, 151, 112, 1) 100%
+  );
+  border-radius: 3vh;
+  display: grid;
+  grid-template-rows: 50% auto;
+}
+.showreel-title {
+  margin: 0 auto;
+  grid-row: 2;
+  align-self: start;
+  display: block;
+  width: fit-content;
+}
 /************ CONTACT SECTION ******************/
 .contact-section {
-  grid-row: 6;
+  grid-row: 8;
 }
 .contact-form {
   height: 100%;
@@ -1263,6 +1299,84 @@ button:focus {
     border-radius: 6em !important;
   }
 }
+
+.email-div {
+  grid-row: 10;
+  display: grid;
+  grid-template-rows: auto 2vh auto;
+  grid-template-columns: 1fr;
+  margin: auto;
+  width: 60%;
+}
+.email-text {
+  grid-row: 1;
+  justify-self: center;
+}
+.email-text {
+  margin: 0;
+}
+.email {
+  grid-row: 3;
+  justify-self: center;
+  color: #ffff;
+  background-color: #1372c6;
+  padding: 1vw 1.8vw;
+  border-radius: 4vh;
+  transition: all ease 0.3s;
+  box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.1);
+}
+
+.email:hover {
+  border-radius: 2vh;
+  cursor: pointer;
+  background-color: #343534;
+}
+.email-click {
+  transform: scale(0.9);
+  background-color: rgb(138, 138, 138) 4;
+}
+
+.email h3 {
+  margin: 0;
+  display: inline-block;
+}
+
+.icon-copy {
+  color: #ffff;
+  font-size: 18px;
+}
+.icon-copy-div {
+  display: inline-block;
+  transition: all ease 0.3s;
+}
+.icon-tick {
+  color: #ffff;
+  font-size: 18px;
+}
+.icon-tick-div {
+  display: inline-block;
+  transition: all ease 0.3s;
+}
+.icon-click {
+  transform: scale(0);
+  display: none;
+}
+@media only screen and (min-width: 1920px) {
+  .icon-copy {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 2304px) {
+  .icon-copy {
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 3840px) {
+  .icon-copy {
+    font-size: 48px;
+  }
+}
+
 /************************* PROJECTS PAGE CATCH **************************/
 .project-page-grid {
   width: 100%;

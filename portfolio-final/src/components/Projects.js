@@ -83,7 +83,7 @@ const Projects = [
     project_name: "adobe",
     title: "Adobe Creative Cloud Promo",
     subtitle: "Discover what the creative cloud is capable of.",
-    adobe_link: "https://vimeo.com/427939673",
+    adobe_link: "https://vimeo.com/483477727",
     palette: [
       "adobe-green",
       "adobe-orange",
@@ -111,7 +111,7 @@ const Projects = [
     assets_img_3: "/images/assets_img_3.svg",
     dream_bigger_body:
       "The solution is a 30 second motion graphic, showcasing the best apps and their primary functions. The motion graphic is intended as promotional material, possibly in the context of a YouTube advertisement. The upbeat music, eye-catching graphics and fast pace all draw the user in and re-ignite a sense of excitement for the creative cloud. ",
-    dream_bigger_video: "https://player.vimeo.com/video/427939673",
+    dream_bigger_video: "https://player.vimeo.com/video/483477727",
     concluding_comments:
       "This project gave me a chance to practice some core principles of animation and experiment with pacing; both crucial parts of motion graphics, a skill I want to further hone. Working on my animation skills has improved my digital designs. I now find it easier to conceptualise creative interactive features, produce more polished micro-interactions and present my work in a cleaner and more polished format. I can’t wait to use animation and motion graphics more in my digital design work. ",
     next_project_img: "/images/next-project-catch.svg",
