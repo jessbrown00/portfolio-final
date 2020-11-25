@@ -205,11 +205,22 @@ const App = {
     instaBtn.append(instaIcon);
     socialsDiv.append(instaBtn);
     instaIcon.setAttribute("data-aos", "flip-left");
-    if (window.matchMedia("(min-width: 1440px)").matches) {
+    if (window.matchMedia("(min-width: 1900px)").matches) {
+      instaIcon.setAttribute("data-aos", "flip-left");
       instaIcon.setAttribute("data-aos-offset", "80");
     } else {
       instaIcon.removeAttribute("data-aos");
+      instaIcon.removeAttribute("data-aos-offset");
     }
+    window.addEventListener("resize", () => {
+      if (window.matchMedia("(min-width: 1900px)").matches) {
+        instaIcon.setAttribute("data-aos", "flip-left");
+        instaIcon.setAttribute("data-aos-offset", "80");
+      } else {
+        instaIcon.removeAttribute("data-aos");
+        instaIcon.removeAttribute("data-aos-offset");
+      }
+    });
 
     //LinkedIn
     const linkedInBtn = document.createElement("a");
@@ -221,12 +232,23 @@ const App = {
     linkedInBtn.append(linkedInIcon);
     socialsDiv.append(linkedInBtn);
     linkedInIcon.setAttribute("data-aos", "flip-left");
-    linkedInIcon.setAttribute("data-aos-delay", 200);
-    if (window.matchMedia("(min-width: 1440px)").matches) {
+    linkedInIcon.setAttribute("data-aos-delay", 150);
+    if (window.matchMedia("(min-width: 1900px)").matches) {
+      linkedInIcon.setAttribute("data-aos", "flip-left");
       linkedInIcon.setAttribute("data-aos-offset", "80");
     } else {
       linkedInIcon.removeAttribute("data-aos");
+      linkedInIcon.removeAttribute("data-aos-offset");
     }
+    window.addEventListener("resize", () => {
+      if (window.matchMedia("(min-width: 1900px)").matches) {
+        linkedInIcon.setAttribute("data-aos", "flip-left");
+        linkedInIcon.setAttribute("data-aos-offset", "80");
+      } else {
+        linkedInIcon.removeAttribute("data-aos");
+        linkedInIcon.removeAttribute("data-aos-offset");
+      }
+    });
 
     //Behance
     const behanceBtn = document.createElement("a");
@@ -239,12 +261,23 @@ const App = {
     socialsDiv.append(behanceBtn);
     behanceIcon.setAttribute("data-aos", "flip-left");
 
-    behanceIcon.setAttribute("data-aos-delay", 300);
-    if (window.matchMedia("(min-width: 1440px)").matches) {
+    behanceIcon.setAttribute("data-aos-delay", 250);
+    if (window.matchMedia("(min-width: 1900px)").matches) {
+      behanceIcon.setAttribute("data-aos", "flip-left");
       behanceIcon.setAttribute("data-aos-offset", "80");
     } else {
       behanceIcon.removeAttribute("data-aos");
+      behanceIcon.removeAttribute("data-aos-offset");
     }
+    window.addEventListener("resize", () => {
+      if (window.matchMedia("(min-width: 1900px)").matches) {
+        behanceIcon.setAttribute("data-aos", "flip-left");
+        behanceIcon.setAttribute("data-aos-offset", "80");
+      } else {
+        behanceIcon.removeAttribute("data-aos");
+        behanceIcon.removeAttribute("data-aos-offset");
+      }
+    });
 
     //Dribbble
     const dribbbleBtn = document.createElement("a");
@@ -257,12 +290,23 @@ const App = {
     socialsDiv.append(dribbbleBtn);
     dribbleIcon.setAttribute("data-aos", "flip-left");
 
-    dribbleIcon.setAttribute("data-aos-delay", 400);
-    if (window.matchMedia("(min-width: 1440px)").matches) {
+    dribbleIcon.setAttribute("data-aos-delay", 300);
+    if (window.matchMedia("(min-width: 1900px)").matches) {
+      dribbleIcon.setAttribute("data-aos", "flip-left");
       dribbleIcon.setAttribute("data-aos-offset", "80");
     } else {
       dribbleIcon.removeAttribute("data-aos");
+      dribbleIcon.removeAttribute("data-aos-offset");
     }
+    window.addEventListener("resize", () => {
+      if (window.matchMedia("(min-width: 1900px)").matches) {
+        dribbleIcon.setAttribute("data-aos", "flip-left");
+        dribbleIcon.setAttribute("data-aos-offset", "80");
+      } else {
+        dribbleIcon.removeAttribute("data-aos");
+        dribbleIcon.removeAttribute("data-aos-offset");
+      }
+    });
 
     const footerHolder = document.querySelector("#footer-div");
     const footer = document.createElement("footer");
