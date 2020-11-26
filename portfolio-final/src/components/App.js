@@ -85,7 +85,7 @@ const App = {
   loadNav: () => {
     // get main nav div
     let mainNav = document.querySelector("#main-nav");
-    mainNav.setAttribute("data-aos", "fade-down");
+    // mainNav.setAttribute("data-aos", "fade-down");
     let logo = document.querySelector("#logo");
     const logoBtn = document.createElement("a");
     logoBtn.href = "#";
