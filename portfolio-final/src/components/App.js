@@ -49,7 +49,7 @@ const App = {
     } else {
       // load 404 page
       //console.log("doesn't exist");
-      App.loadPage("404 page/file not found", "template-page-404", {});
+      App.loadPage("404 page/file not found", "template-page-404", {}, {});
     }
   },
 
@@ -114,50 +114,6 @@ const App = {
     contactBtn.href = "#contact";
     contactBtn.innerText = "Contact";
     mainNav.appendChild(contactBtn);
-
-    // const socialsDiv = document.createElement("div");
-    // socialsDiv.classList.add("socials");
-    // App.rootEl.appendChild(socialsDiv);
-
-    // const linkedinBtn = document.createElement("a");
-    // linkedinBtn.classList.add("social-btn");
-    // linkedinBtn.href = "https://www.linkedin.com/in/luke-fordham-5411451b5/";
-    // socialsDiv.appendChild(linkedinBtn);
-    // const linkedinIcon = document.createElement("img");
-    // linkedinIcon.src = "/images/linkedin-icon.svg";
-    // linkedinBtn.appendChild(linkedinIcon);
-
-    // const behanceBtn = document.createElement("a");
-    // behanceBtn.classList.add("social-btn");
-    // behanceBtn.href = "https://www.behance.com";
-    // socialsDiv.appendChild(behanceBtn);
-    // const behanceIcon = document.createElement("img");
-    // behanceIcon.src = "/images/behance-icon.svg";
-    // behanceBtn.appendChild(behanceIcon);
-
-    // const dribbbleBtn = document.createElement("a");
-    // dribbbleBtn.classList.add("social-btn");
-    // dribbbleBtn.href = "https://www.dribbble.com";
-    // socialsDiv.appendChild(dribbbleBtn);
-    // const dribbbleIcon = document.createElement("img");
-    // dribbbleIcon.src = "/images/dribbble-icon.svg";
-    // dribbbleBtn.appendChild(dribbbleIcon);
-
-    // const igBtn = document.createElement("a");
-    // igBtn.classList.add("social-btn");
-    // igBtn.href = "https://www.instagram.com";
-    // socialsDiv.appendChild(igBtn);
-    // const igIcon = document.createElement("img");
-    // igIcon.src = "/images/ig-icon.svg";
-    // igBtn.appendChild(igIcon);
-
-    // const twitterBtn = document.createElement("a");
-    // twitterBtn.classList.add("social-btn");
-    // twitterBtn.href = "https://www.twitter.com";
-    // socialsDiv.appendChild(twitterBtn);
-    // const twitterIcon = document.createElement("img");
-    // twitterIcon.src = "/images/twitter-icon.svg";
-    // twitterBtn.appendChild(twitterIcon);
 
     App.refreshNav();
   },

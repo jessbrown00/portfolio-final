@@ -174,6 +174,51 @@ body {
 .hide-scroll {
   scroll-behavior: auto;
 }
+.page-content-error {
+  overflow: hidden;
+}
+
+#error {
+  margin-top: 5vh;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-rows: 6% 12% 0% 6% 10% 25% 17% 10% 10%;
+  grid-template-columns: 15% 70% 15%;
+  background-image: url("/images/WebsiteLandingBG.png");
+}
+.error-title {
+  font-size: 5em;
+  grid-row: 2;
+  grid-column: 2;
+  justify-self: center;
+}
+.error-text {
+  grid-column: 2;
+  justify-self: center;
+}
+.avatar-error {
+  grid-row-start: 6;
+  grid-row-end: 8;
+  justify-self: center;
+  grid-column: 2;
+  width: 60%;
+  transform: translateX(-2.5vw);
+  animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.6s both;
+  transition: ease all 0.3s;
+}
+.ledge-error {
+  width: 60%;
+}
+.error-body-div {
+  grid-row: 4;
+  grid-column: 2;
+  justify-self: center;
+  align-self: start;
+}
+.error-body-div h4 {
+  margin: 0;
+}
 
 /************ COMMON ELEMENTS ******************/
 a {
@@ -412,9 +457,20 @@ button:focus {
   align-self: center;
   animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.2s both;
 }
+@media only screen and (min-width: 2560px) {
+  .action-button-home {
+    grid-row: 10;
+    align-self: end;
+  }
+}
 .action-button-home:hover {
   border-radius: 0.3em;
   background-color: #343534;
+}
+.error-btn {
+  grid-row: 5;
+  grid-column: 2;
+  justify-self: center;
 }
 
 /************ NAV ******************/
@@ -651,6 +707,11 @@ button:focus {
     grid-template-rows: 1vh auto 300px;
   }
 }
+.page-404 {
+  display: grid;
+  grid-template-rows: auto;
+}
+
 .page-home {
   display: grid;
   grid-template-rows: 1vh auto 100px;

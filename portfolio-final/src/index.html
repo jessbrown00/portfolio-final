@@ -732,15 +732,30 @@
 
     <!-- 404 Page Template-->
     <script type="text/template" id="template-page-404">
-      <div class="page">
-          <header class="page-header">
-              <div id="logo"></div>
-              <nav id="main-nav"></nav>
-          </header>
-          <main class="page-content">
-              <h1>404 page/file not found</h1>
-              <p>Oopsy</p>
-          </main>
+      <div class="page-404">
+        <header class="page-header">
+          <nav id="main-nav">
+            <div id="logo"></div>
+          </nav>
+      </header>
+          <main class="page-content page-content-error">
+            <div id="error">
+                <h1 class="error-title">404</h1>
+                <div class = "error-body-div">
+                <h4>
+                  Whoops! I can't find that page. 
+                </h4>
+              </div>
+                <div class = "error-btn">
+                <a href = "#"class = "action-button-home"> HEAD BACK HOME </a>
+              </div>
+              
+              <div class="ledge ledge-error"></div>
+              <div class="avatar avatar-error">
+                <img src="/images/avatar-3.svg" />
+              </div>
+            </div>
+            </main>
       </div>
     </script>
 
